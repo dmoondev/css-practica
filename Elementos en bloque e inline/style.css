@@ -1,0 +1,70 @@
+/* Elementos en bloque e inline. Además del elemento híbrido: inline-block
+*/
+
+body{
+    font-size: 25px;
+}
+
+ .element{
+    width: 250px;
+    height: 250px;
+    background-color: purple;
+    border: 20px solid steelblue;
+    padding: 30px;
+    margin: 0 auto; 
+} 
+
+/*  Elemento en bloque:
+    Todos los elementos tienen por defecto el "display:block", es decir que no
+    es necesario colocarlo. A menos que se modifique de raíz y se selecione
+    "display: inline". En ese caso será necesario especificar si será tomado 
+    como elemento de bloque.
+
+    Caracteristicas del elemento block:
+    1- Genera un salto de linea automático, porque ocupa el 100% del body.
+    2- Dos elementos block, no pueden compartir el mismo espacio horizontalmente.
+    3- Con el block, vienen incorporadas las funciones del block-model(padding, border, margin, width, etc)
+    4- Ejemplos de elementos bloque: div, section, main, header, footer, h1, p, etc)
+*/
+
+.block{
+    background-color: teal;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Elemento inline:
+    No hay salto de línea hasta que se acabe el espacio horizontalmente. Los elementos
+    en línea se van colocando uno al lado del otro, siempre y cuando haya espacio horizontalmente. En
+    otras palabras, un elemento inline, solo ocupa el espacio del contenido y no todo el ancho, como
+    lo hace el block. 
+    El elemento inline no puede aplicar las funciones block-model. Si se intentan usar esas propiedades
+    el archivo puede sufrir alteraciones no esperadas.
+
+    inline-block:
+    Este elemento es un híbrido, es decir una mezcla del inline y el block. Al aplicar esta propiedad,
+    podremos utilizar algunas las propiedades del margin, border y padding..
+    Con esto, los elementos no ocuparan más espacio del que contenga el contenido y los elementos que estén
+    dentro de este, se acomodarán uno al lado del otro hasta ocupar todo el ancho disponible. Cuando esto
+    suceda, se generará un salto de línea y si quedan elementos por acomodarse, lo harán debajo.
+*/
+
+.inline{
+    background-color: crimson;
+    color: white;
+}
+
+/*  Ejemplo de inline block.
+    Para ver la diferencia, solo basta con borrar la propiedad "display:inline-block" y
+    luego volver a colocarla. El width y el height
+*/ 
+
+.button{
+    display: inline-block;
+    background-color: steelblue;
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    padding: 15px 40px;
+    border-radius: 40px;
+}
