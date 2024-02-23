@@ -1,0 +1,51 @@
+/* MIRAR ESTO AL FINAL:
+    Sería tedioso tener muchisimos elementos y tener que darles a todos 
+    la configuración del border-box a cada uno. Por este motivo se utiliza 
+    el simbolo general: * para que todos los elementos adopten (o hereden) 
+    este comportamiento. Eso sí, al configurar esto, cada vez que quieramos 
+    usar el "contente-box", habrá que especificarlo en cada elemento
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+/* Creamos un elemento y veremos como aplicar el box-sizing*/
+
+ /* Si no aplicamos el Box-Sizign el elemento tendrá un tamaño
+    de 250px x 250px. Es decir, el border y el padding no son
+    tenidos en cuenta en el tamaño final del elemento. Debe quedar
+    claro, que por defecto el box-sizing esta configurado en "content-box"
+ */
+
+ .element{
+    width: 250px;
+    height: 250px;
+    background-color: purple;
+    border: 20px solid steelblue;
+    padding: 30px;
+    margin: 0 auto; 
+} 
+
+/*  En el siguiente elemento hacemos uso del box-sizing alterando su valor
+    por defecto y colocando en su lugar "border box". Esta propiedad
+    permite que el elemento adopte como medidas máximas los valores pasado por
+    el width y el height. Es decir, que el tamaño final será de 
+    250px x 250px; incluyendo el tamaño del border y el padding. En este
+    caso particular que tenemos debajo, a los 250px se le descontarán
+    los 20px del border y los 30px del padding y lo que quede, se le asignará
+    al elemento.
+*/
+
+.element{
+    box-sizing: border-box;
+    width: 250px;
+    height: 250px;
+    background-color: purple;
+    border: 20px solid steelblue;
+    padding: 30px;
+    margin: 0 auto;
+}
+
