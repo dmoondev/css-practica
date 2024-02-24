@@ -1,6 +1,10 @@
 /*  Background es un shorthand el cual sirve para modificar el fondo de un
     elemento
 */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
 
 .background{
     width: 300px;
@@ -11,4 +15,12 @@
     background-size: contain; /* Con la propiedad contain, ordenamos que la imagen no supere el espacio del div. Se puede adptar a la medida que se desee. Se le puede pasar por parametro el ancho y largo, en ese orden*/
     background-position: center; /*Manipulamos la posición de la imagen. En caso de pasar dos valores , el primera parámetro será para el eje de las x y el segundo para el eje de las y*/
     background-repeat: no-repeat; /*Decidimos cuantas veces se repite la imagen*/
+}
+
+.gradiente{
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    background-color: white;
+    background-image: linear-gradient(rgb(215, 243, 243), rgb(46, 189, 255), red); /* Con la propiedad linear-gradient(), podemos generar un fondo de color en degradez*/
 }
