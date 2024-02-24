@@ -22,5 +22,5 @@
     height: 300px;
     margin: 50px;
     background-color: white;
-    background-image: linear-gradient(rgb(215, 243, 243), rgb(46, 189, 255), red); /* Con la propiedad linear-gradient(), podemos generar un fondo de color en degradez*/
+    background-image: linear-gradient(rgb(215, 243, 243), rgba(46, 189, 255, 0.596), rgba(255, 0, 0, 0.507)); /* Con la propiedad linear-gradient(), podemos generar un fondo de color en degradez */
 }
