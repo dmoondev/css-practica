@@ -1,0 +1,52 @@
+/*  Para descargar fuentes que sirvan en la mayoría de los navegadores, lo podemos hacer desde
+    https://fonts.google.com/   
+*/
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: cursive; /*Cambia el estilo de fuente, se pueden colocar hasta cuatro valores, por si la primera seleccionada no la encuentra y asi sucesivamente*/
+    font-size: 30px; /*Cambia el tamaño de la fuente*/
+}
+
+.card{
+    width: 700px;
+    height: 900px;
+    max-height: 90%;
+    margin: 0 auto;
+    margin-top: 80px;
+    background-color: rgb(0, 174, 255);
+    color: #fff;
+    padding: 40px 20px;
+    border-radius: 6%;
+}
+
+.img{
+    width: 350px;
+    display: block;
+    margin: 0 auto;
+}
+
+.title{
+    margin-bottom: 15px;
+    border-color: #fff;
+    letter-spacing: normal; /*Modifica el espaciado entre letras, Acepta valores negativos*/
+    hyphens: auto; /*Solo sirve para palabras cortas. Esto coloca automaticamente un guión, más un salto de línea. Controloando así el desborde del texto dentro de su contenedor*/
+    overflow-wrap: break-word; /*Esta propiedad limita a cualquier palabra de desbordar de su contenedor*/
+    text-align: center; /*Esta propiedad permite centrar el texto*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900; /*Con esto modificamos el grosor de la fuente*/
+}
+
+.paragraph{
+    text-transform: uppercase; /*Convierte todas la letras en mayusculas*/
+}
+
+.paragraph--first{
+    text-transform: lowercase; /*Convierte todas la letras en minusculas*/
+    margin-bottom: 20px;
+}
+
