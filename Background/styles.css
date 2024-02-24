@@ -17,10 +17,10 @@
     background-repeat: no-repeat; /*Decidimos cuantas veces se repite la imagen*/
 }
 
+/*EL siguiente gradiente es aplicado a una foto. En la carpeta assets se puede ver la imagen original, o bien puedes cambiar el color del linear-gradient*/
+
 .gradiente{
-    width: 300px;
-    height: 300px;
-    margin: 50px;
-    background-color: white;
-    background-image: linear-gradient(rgb(215, 243, 243), rgba(46, 189, 255, 0.596), rgba(255, 0, 0, 0.507)); /* Con la propiedad linear-gradient(), podemos generar un fondo de color en degradez */
+    height: 600px;
+    background-image: linear-gradient(rgba(149, 228, 146, 0.623), rgba(255, 255, 0, 0.315)), url('assets/fondo.jpg'); /* Con la propiedad linear-gradient(), podemos generar un fondo de color en degradez */
+    background-size: cover;
 }
