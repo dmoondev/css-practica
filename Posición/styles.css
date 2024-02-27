@@ -5,6 +5,7 @@
 
 body{
     font-family: Arial;
+    min-height: 300vh;
 }
 
 .container{
@@ -21,4 +22,58 @@ body{
     line-height: 100px;
     text-align: center;
     color: #fff;
+}
+
+/*  El static es la posición predeterminada, con orden de arriba a abajo
+    y de izquierda a derecha    
+*/
+
+.static{
+    background-color: midnightblue;
+    position: static; 
+}
+
+/*  Esta propiedad (y todas las restantes) activa 4 propiedades: Top, buttom, left, right; estos elementos
+    nos permiten desplazar al elementos desde su posición original.
+    Al mover el elmento, a este se le conserva su espacio. 
+*/
+.relative{
+    background-color: tomato;
+}
+
+/*  A diferencia de relative, con Absolute el elemento pierde el lugar reservado
+    Absolute se movueve en base a su ancestro contenedor (o padre) más cercano que
+    que tenga una position diferente a static. Si todos los padres contienen static, 
+    por defecto el elemento absolute se posicionará en el ViewPort
+*/
+
+.absolute{
+    background-color: purple;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*El elemento se posiciona en la parte superior-derecha del ViewPort
+      Para ver el comportamiento de posición, a .container coloquele una position: relative.
+    */
+}
+
+/*  La position Fixed, hacer que el elemento se "pegue" al navegador, por más que se mueva el scroll
+    el elemento quedará fijado. Para que eso suceda, el elemento se posiciona en base al ViewPort
+*/
+
+.fixed{
+    background-color: royalblue;
+    position: fixed;
+}
+
+/*  El posicionamiento Sticky es una mezcla de relative y fixed. Es decir que el elemento
+    se va a pegar a la pantalla una vez que se ubique a una distancia definida, en relación
+    con el ViewPort.
+    Importante: Si no configuramos el top, buttom, left o right, el elemento no se fijará al
+    bajar o subir el scroll.
+*/
+.sticky{
+    background-color: slateblue;
+    position: sticky;
+    top: 0;
 }
