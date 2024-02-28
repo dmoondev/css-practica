@@ -68,12 +68,27 @@ body{
 
 /*  El posicionamiento Sticky es una mezcla de relative y fixed. Es decir que el elemento
     se va a pegar a la pantalla una vez que se ubique a una distancia definida, en relación
-    con el ViewPort.
+    con el ViewPort o del elemento que lo contenga. 
     Importante: Si no configuramos el top, buttom, left o right, el elemento no se fijará al
     bajar o subir el scroll.
 */
+
 .sticky{
     background-color: slateblue;
     position: sticky;
     top: 0;
+}
+
+/*  En el siguiente ejemplo, se pude ver que la posición sticky sirve tambien para otro contenedor que no
+    sea el ViewPort.
+*/
+
+.container{
+    background-color: rgb(105, 151, 252);
+}
+
+.stickycontainer{
+    background-color: rgb(243, 90, 223);
+    position: sticky;
+    top: 30%;
 }

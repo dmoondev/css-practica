@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+    min-height: 300vh;
+}
+
+.container{
+    width: 90%;
+    height: 500px;
+    border: 2px solid #000;
+    margin: 80px auto;
+}
+
+/*  El z-index sirve para manipular el superposicionamiento de elementos. Si se selecciona "auto"
+    esto indicará que el primer elemento que se mostrará, será el último que está colocado
+    en el html.
+    Tambien se lo puede manipular a traves de valores numericos enteros. El elemento que contenga
+    el valor más alto, será el que se mostrará primero.
+    Para ver el funcionamiento, cambiar los valores del static, absolute y fixed.
+*/
+
+.position{
+    width: 150px;
+    height: 100px;
+    font-size: 1.3rem;
+    line-height: 100px;
+    text-align: center;
+    color: #fff;
+
+    
+}
+
+.static{
+    background-color: midnightblue;
+
+}
+
+.relative{
+    background-color: tomato;
+    position: relative;
+    z-index: 100;
+}
+
+.absolute{
+    position: absolute;
+    background-color: purple;
+    top: 60px;
+    left: 40px;
+    z-index: 150;
+}
+
+.fixed{
+    background-color: royalblue;
+    position: fixed;
+    top: 100px;
+    left: 80px;
+    z-index: 10;
+}
+
