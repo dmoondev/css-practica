@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+
+.element{
+    margin: 80px auto;
+    width: 50%;
+    height: 200px;
+    background-color: royalblue;
+}
+
+/*  Media Query es una herramienta responsive, que sirve para ajustar el tamaño
+    del viewport. Es decir, que para cada tamaño específico de viewport (celular, tablet, pc)
+    existe un ajuste de tamaño 
+
+    El media query recibe siempre una condición, que por lo general es una maximo o un 
+    minimo de pantalla y dentro del mismo, se ajustan los elementos para ese tamaño.
+
+    Para tener en cuenta: esta herramienta respeta la cascada de estilos, por lo que si queremos 
+    trabajar con la condicion de máximo, debemos comenzar de mayor a menor (como se muestra en el
+    siguiente ejemplo). Para los mínimos, haremos lo contrario. Es decir, acomodaremos la @media
+    de menor a mayor.
+*/
+
+@media (max-width: 1024px){
+    .element{
+        background-color: crimson;
+    }
+}
+
+@media (max-width: 768px){
+    .element{
+        background-color: yellow;
+    }
+}
+
+@media (max-width: 475px){
+    .element{
+        background-color: black;
+    }
+}
+
+
+
+
