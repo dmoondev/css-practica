@@ -25,6 +25,9 @@ body{
     trabajar con la condicion de máximo, debemos comenzar de mayor a menor (como se muestra en el
     siguiente ejemplo). Para los mínimos, haremos lo contrario. Es decir, acomodaremos la @media
     de menor a mayor.
+
+    Dato importante: Los media query respetan la especificidad, así que hay que tener mucho cuidado
+    con el rol de importancia que se le da a cada elemento.
 */
 
 @media (max-width: 1024px){
