@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+
+/*  ALIENACION EN FLEX-BOX
+
+    Podemos cambiar la alineación de todos los flex-items por todo flex-container
+    Para hacer esto, debemos tener espacio disponible, si no no será posible
+
+    MAIN-AXIS----------------------------------------------------------------
+    *Para cambiar la posición en el main-axis, utilizaremos la propiedad justify-content
+    que tiene por defecto la posicion de flex-start; también se puede utilizar flex-center
+    y flex-end.
+
+    Otros valores que se pueden utilizar para justify-content:
+
+    space-between: este valor hacer que todo el espacio sobrante se distribuya entre cada elemento, pero el primer 
+    flex-items se pega a la linea inicial del main-axis, y el último al final del main-axis
+
+    space-around: este valor hace lo mismo que between, a diferencia que el primer y ultimo elmento
+    no se pegan en los extremos y estos recibiran un espacio al 50% de los espacios que hay en el centro.
+
+    space-evenly: Es igual a around, con la unica diferencia, es que el espacio en los extremos es del 100%, lo
+    que quiere decir que todos los espacios entre cada elemento, tendran el mismo tamaño.
+
+    CROSS-AXIS----------------------------------------------------------------
+    Para cambiar la posicion en el cross-axis, utilizaremos align-items y aling-content
+
+    *Valores que se pueden utilizar para aling-items:
+    stretch: valor predeterminado. Esta propiedad estira los elementos a traves del cross-axis si es estos no
+    tienen un tamaño determinado
+
+    flex-start: manda los elementos al inicio del cross-axis
+
+    flex-end: manda los elementos al final del cross-axis
+
+    center: manda los elementos al centro del cross-axis
+
+    baseline: Hace que los flex-items se alinien con su linea base y la linea base, es la linea inferior del texto
+
+
+    *Valores que se pueden utilizar para aling-content: Esta propiedas solo funciona cuando hay mas de una fila o 
+    mas de una columna y el flex-wrap está en wrap. aling-content hace lo mismo que justify-content, pero en el 
+    lado del cross-axis. Si no hay más de una fila o columna los efectos no se van a aplicar.
+    Esta propiedad no tiene ningun valor por defecto, pero se pueden usar los siguiente::after
+
+    flex-start: Agrupa los items al comienzo del flex-content, sin dejar espacios entre ellos.
+
+    flex-end: Agrupa los items al final del flex-content, sin dejar espacios entre ellos.
+
+    center::afterAgrupa los items al centro del flex-content, sin dejar espacios entre ellos.
+    
+    También funcionan los valores stretch, space-between, space-around y space evenly.
+*/
+
+.flex{
+    width: 90%;
+    max-width: 800px;
+    min-height: 600px;
+    margin: 80px auto;
+    border: 3px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.element{
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+}
+
+.element1{
+    background-color: crimson;
+}
+
+.element2{
+    background-color: purple;
+}
+
+.element3{
+    background-color: steelblue;
+}

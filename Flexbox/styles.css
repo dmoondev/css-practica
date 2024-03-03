@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+
+/*  Flexbox es un modulo de css permite crear sitios web flexibles y adaptables
+    a dispoitivos moviles.
+
+    Si agregamos 6 elementos más en nuestro html, veremos cómo los elementos 
+    acomodan su tamaño de ancho, para caber todos en la misma fila.
+
+*/
+
+/*  FLEX-DIRECTION: Esta propiedad nos permite redireccionar a los elementos. 
+
+    row: Main-axis (izq-der) y Cross-axis(arr-aba)  (Este valor es el que está por defecto
+    row-reverse: Main-axis (der-iqz) y Cross-axis(arr-aba)
+    column: Cross-axis (izq-der) y Main-axis (arr-aba)
+    column-reverse: Cross-axis (izq-der) y Main-axis (aba-arri)
+
+    FLEX-WRAP: Define el comportamiento de los hijos del flex-container 
+    cuando el tamaño sumado de los flex-items rebalsa el tamaño del contenedor
+
+*/
+
+.flex{
+    width: 90%;
+    max-width: 800px;
+    min-height: 600px;
+    margin: 80px auto;
+    border: 3px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.element{
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+}
+
+.element1{
+    background-color: crimson;
+}
+
+.element2{
+    background-color: purple;
+}
+
+.element3{
+    background-color: steelblue;
+}
