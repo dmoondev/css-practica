@@ -21,6 +21,18 @@ body{
     flex-shrink: esta propiedad hace lo inverso a flex-grow. Es decir, cuando manipulamos flex-grow el 
     item en cuestion tiende a aumentar su tamaño. Con flex-shrink el item en cuestión reduce su tamaño
 
+    flex-basis: indica el tamño inicial del elemento, antes de que se aplique flex-grow o flex-shrink. El 
+    valor por defecto es auto. Al tamaño lo define dependiendo del Main-Axis. En 
+    otras palabas podemos decir que el flex-basis define el tamaño de los 
+    flex-items en el main-axis. Hay que dejar claro que flex-basis tiene un 
+    preponderancia sobre el width.
+    Para trabajar con el flex-basis por columna, solo debemos cambiar el flex-direction
+    de esta manera, cambiamos el sentido al main-axis
+
+    align-self: Permite alinear a los flex-items. Lo bueno es que esta propiedad se la podemos aplicar a 
+    un solo item. Es decir que podremos alinear a ese item de manera independiente.
+    Cabe remarcar que esta propiedad trabaja sobre el cross-axis.
+    Esta propiedad tiene el mismo comportamiento que aling-items
 */
 
 .flex{
@@ -40,7 +52,7 @@ body{
     line-height: 100px;
     /* width: 100px; */
     /*Modificamos el width para el ejemplo del flex-grow, para ver el ejemplo
-      de flow-grow comentar el width de abjo y descomentar el de arriba
+      de flow-grow comentar el width de abjo y descomentar el de arriba. 
     */
     width: 400px;
     height: 100px;
