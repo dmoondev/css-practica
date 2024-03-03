@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+
+/*  order: con flex podermos ordenar a los elementos de menor a mayor, con la propiedad 'order'.
+
+    outline: propiedad que funciona de igual manera que el border, pero no pertenece al box-model.
+    El tamaño que ocupe el outline se le sumara al valor del flex-content.
+
+    flex-grow: es una propiedad que manipula la flexibilidad de los items. Por defecto su valor es 0
+    Esta propiedad se encarga de distribuir el espacio sobrante. Si el valor desde el .element es de 1,
+    entonces cada elemento será del mismo tamaño en el rellenado del espacio.
+    Ahora, si mantenemos el valor 1 en el .element y al .element2 ponemos al flex-grow en 2, a ese elemento
+    se le asignará más espacio.
+
+    flex-shrink: esta propiedad hace lo inverso a flex-grow. Es decir, cuando manipulamos flex-grow el 
+    item en cuestion tiende a aumentar su tamaño. Con flex-shrink el item en cuestión reduce su tamaño
+
+*/
+
+.flex{
+    width: 90%;
+    max-width: 800px;
+    min-height: 600px;
+    margin: 80px auto;
+    border: 3px solid #000;
+    display: flex;
+
+}
+
+.element{
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 100px;
+    /* width: 100px; */
+    /*Modificamos el width para el ejemplo del flex-grow, para ver el ejemplo
+      de flow-grow comentar el width de abjo y descomentar el de arriba
+    */
+    width: 400px;
+    height: 100px;
+    /* flex-grow: 1; */
+
+    flex-shrink: 1;
+}
+
+.element1{
+    background-color: crimson;
+}
+
+.element2{
+   background-color: purple;
+   /*  flex-grow: 2; */
+   flex-shrink: 2;
+}
+
+.element3{
+    background-color: steelblue;
+}
