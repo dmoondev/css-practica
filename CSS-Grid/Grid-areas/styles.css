@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+
+.container{
+    width: 90%;
+    height: 600px;
+    outline: 2px solid;
+    margin: 80px auto;
+    display: grid;
+
+    /*  Para trabajar con grid-areas, primero debemos definir columnas y filas
+
+        En CSS grid podemos definir areas que van a ocupar los grid-items y para definir áreas utilizaremos
+        la propiedad grid-template-areas.
+    */
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+
+    /*  GRID-AREA:
+        Las filas se representan con comillas, dentor de cada comillas colocaremos el nombre de cada
+        áreas, donde cada nombre representará una columna.
+
+        Nota: Para dejar un área vacía, solo basta colocar un . (punto).
+    */
+    grid-template-areas: 
+    "nav nav nav nav nav"
+    "m main main side side"
+    "m main main side side"
+    "m main main side side"
+    "footer footer footer footer .";
+}
+
+.item{
+    color: #fff;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item1{
+    background: slateblue;
+    grid-area: nav;
+}
+
+.item2{
+    background: deeppink;
+    grid-area: footer;
+}
+
+.item3{
+    background: tomato;
+    grid-area: main;
+}
+
+.item4{
+    background: darkseagreen;
+    grid-area: side;
+}
+
+.item5{
+    background: midnightblue;
+    grid-area: m;
+}
+
+@media (min-width:800px){
+    .container{
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+
+        grid-template-areas: 
+        "m main main side side"
+        "m main main side side"
+        "m main main side side"
+        "nav nav nav nav nav"
+        "foot foot foot foot foot";
+    }
+}

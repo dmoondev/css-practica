@@ -1,0 +1,97 @@
+/*
+    ¿Qué es CSS GRID?
+    CSS Grid Layout (Sistema de cuadrículas) es el sistema de diseño más poderoso disponible 
+    en CSS.Esto gracias a su sistema bidimensional, lo que significa que puede manejar tanto 
+    columnas (columns) como filas (row).
+
+    Filas y Columnas:
+    Se le llama Grid, porque se utilizan filas y columnas. Estas filas y columnas crean una cuadricula.
+    Cada fila y columna esta formada por dos lineas (Grid-lines).
+
+    Celdas en GRID:
+    Para empezar a entender GRID, debes de verlo como una cuadrícula compuesta de muschas celdas. Al
+    principio los grid-item ocuparán una celda por cada grid item.
+
+    Lineas en GRID:
+    CSS GRID, trabaja en forma de una cuadrícula están compuestas de líneas verticales y horizontales.
+    (column grid lines, row grid lines).
+
+    GRID Areas:
+    Es el espacio entre cuatro grid lines, un grid area puede estar formado por el número que sea de 
+    celdas, pero un grid area siempre debe ser rectangular o cuadrado.
+
+*/
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+
+.container{
+    width: 90%;
+    height: 600px;
+    outline: 2px solid;
+    margin: 80px auto;
+    display: grid;
+
+    /*  grid-template-columns: nos permite crear columnas en la grid. Cada valor que se le pasa, será el tamaño de la nueva fila
+        para evitar tener que crear muchisimas fila, podemos usar la funcion repeat(nro_de_repetición, tamaño). En el caso de querer
+        que todos los grid-items tengan el mismo tamaño, en el parámetro de 'tamaño' podemos pasar un valor 'fr'. Esta unidad de medida
+        no es más que una unidad de fracción. Por ejemplo, al repeat(3, 1fr), creará 3 colmnas iguales, sin dejar un espacio en blanco.
+        NOTA: La unidad fr, es una unidad creada solo para usar en grid.
+    */
+    /* grid-template-columns: 50px 20%; */
+    grid-template-columns: repeat(3, 1fr);
+
+    /*  grid-template-rows: nos permite crear filas en la grid. Para que algunos de los elementos no pierdan su consistencia, debemos
+        configurar el grid-auto-row, que por defecto tiene el valor auto, lo que permite que los grid-item ocupen todos los espacios 
+        en blanco.
+    */
+
+    grid-template-rows: repeat(7, 100px);
+
+    /*  row-gap: permite crear espacios entre las filas del grid
+        column-gap: permite crear espacios entre las columnas del grid
+        gap: permite modificar tanto filas como columnas. el primer parametro será para las columnas y el segundo para las filas
+    */
+
+/*     row-gap: 10px;
+    column-gap: 10px; */
+    gap: 20px 10px;
+}
+
+.item{
+    /* width: 100px; */ /*Si comentamos el width y el heigth, veremos el comportamiento del grid, solo colocando el display grid en el .container*/
+    /* height: 100px; */
+    color: #fff;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item1{
+    background: slateblue;
+}
+
+.item2{
+    background: deeppink;
+}
+
+.item3{
+    background: tomato;
+}
+
+.item4{
+    background: darkseagreen;
+}
+
+.item5{
+    background: midnightblue;
+}
+
