@@ -1,0 +1,49 @@
+/*
+    CUSTOM PROPERTIES:
+    Las custom properties son conocidas como las variables en css. En un resumen
+    rápido, podemos decir que  las custom properties funcionan como las variables 
+    constantes de los lenguajes de programación. Y en otras palabras, también podemos
+    decir que las custom properties son propiedades de CSS personalizadas.
+
+    Importante: Las custom properties actuan literalmente como una variable en css, es
+    decir que cada custom properties pertenece a un scope. Al saber esto, es recomendable
+    declarar a las custom properties a nivel global y para hacer eso, a las custom properties
+    las declararemos en :root{}
+*/
+
+:root{
+    --color-global: red;
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+
+.container{
+    --color-global: blue; /*Se coloca el mismo nombre que la variable global, para que se puede ver la predominancia de la variable local*/
+}
+
+.title{
+    /* color: royalblue; */
+
+    color: var(--color-global) /*Para invocar la variable definida en :root, utilizamos la funcion va()*/
+}
+
+.btn{
+    display: inline-block;
+    padding: 15px 30px;
+   /*  background-color: royalblue; */
+   background-color: var(--color-global);
+    color: #fff;
+    text-decoration: none;
+}
+
+.paragraph{
+    /* color: royalblue; */
+    color: var(--color-global);
+}
