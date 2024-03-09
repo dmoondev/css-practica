@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button{
+    margin: 50px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 0;
+    text-align: center;
+    width: 200px;
+}
+
+/*
+    Selector de hermano adyacente. 
+    En css un hermano adyacente es el elemento siguiente al elemento en cuestión (siguiente línea
+    de código). Ambos elementos deben estar dentro del mismo contendor, y si un elemento en cuestión
+    no tiene otro elemento debajo de él, eso quiere decir que el elemento en cuestión no tiene un 
+    hno adyacente.
+    El selector se identifica con el simbolo '+' y lo que hará es modificar al hermano adyacente
+    de un elemento en cuestión.
+    Este selector tiene más especificidad que las clases individuales.
+*/
+
+.btn-blue + .btn-green{
+    color: black; /*Acá cambiamos el color de fuente del elemento btn-green que es hno adyacente de btn-blue*/
+}
+
+
+/*
+    Selector de hermanos generales
+    Es similar al selector de hno adyacente, a diferencia que este selector afecta a todos los hermanos
+    que estén por debajo del elemento en cuestión.
+    El simbolo que representa a este selector es el '~'
+*/
+
+.btn-red:hover ~ .button{
+    transform: translate(100%);
+}
+
+.btn-blue{
+    background: slateblue;
+}
+
+.btn-red{
+    background-color: crimson;
+}
+
+.btn-green{
+    background: green;
+}
+
+.element{
+    width: 200px;
+    height: 200px;
+    background: coral;
+    margin-left: 40px;
+}
