@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3vh;
+}
+
+.container{
+    text-align: center;
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+}
+
+.element{
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+}
+
+h2{
+    box-sizing: content-box;
+    margin: 40px auto;
+}
+
+.br{
+    display: block;
+    margin: 20px auto;  
+}
+
+.element1{
+    background-color: slateblue;
+    /*  box-shadow es una propiedad que nos permite crear una sombra identica de un
+        elemento. Pero es tan poderosa esta herramienta, que también podremos crear
+        una sombra de la sombra.
+        Para que funcione, mínimo necesita dos valores: offser-x y offset-y. Estas 
+        serían las coordenadas de la sombra.
+        Además de esos valores, también le podemos pasar un valor para difuminar, uno
+        para determinar el tamaño de la sombra. Y lo interesante es que también 
+        podemos crear otra sombra, colocando al final del cada nueva sombra, una coma.
+    */  
+    box-shadow: 14px 12px 12px blue, 28px 24px 5px 20px tomato;
+}
+
+.element2{
+    background-color: darkgreen;
+    box-shadow: 0px 0px 12px; /*difuminación en el propio elemento */
+}
+
+.element3{
+    /*  El border-raidus nos permite redondear los bordes de nuestros elementos. La
+        propiedad acepta todas las medidas y si por ej le colocarmos 50%, formamos
+        un circulo, siempre y cuando el elemento en cuestión tenga un tamaño 1x1.
+        Hay que tener en cuenta que border-radius es un shorthand y por ende, podemos
+        modificar cada esquina de nuestro elemento a nuestro antojo.    
+    */
+    background-color: rgb(224, 86, 185);
+    border-radius: 50px 100px 10px 30px;
+}
+
+.element4{
+    background-color: rgb(47, 221, 99);
+    border-radius: 50%
+}
