@@ -1,0 +1,72 @@
+/*
+    Pseudoelementos: Son similares a las Pseudoclases, pero a diferencia,
+    estas se invocan con '::'
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.input{
+    display: block;
+    margin: 20px;
+    padding: 16px;
+    font-size: inherit; /*Los input no heredan las fuentes, así que hay que asiganalas*/
+    font-family: inherit;
+    outline: none; /*Esto es para anular el por defecto del border*/
+}
+
+.input:focus{
+    border:1px solid blueviolet;
+    border-radius: 25px;
+}
+
+.label{
+    display: inline-block;
+    background: rgb(237, 138, 158);
+    color: white;
+}
+
+.check{
+    display: inline-block;
+    margin: 20px 0 20px 20px;
+}
+
+.check:checked + .label{
+    background: #92e49c;
+}
+
+.element{
+    width: max-content;
+    padding: 20px;
+    background: slateblue;
+    color: white;
+    font-size: 30px;
+    margin: 60px;
+}
+
+/*
+    Los Pseudoelementos ::before y ::after nos permiten crear bloque
+    de código HTML. Solo podemos crear un solo before y un solo after
+    por cada elemento
+*/
+
+.element::before{
+    content: "Soy un before";
+    color: darkred;
+    background: #5eeea1;
+    display: block;
+}
+
+.element::after{
+    content: "Soy Diego";
+    display: block;
+    padding: 16px;
+    background: crimson;
+}
