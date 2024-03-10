@@ -41,7 +41,7 @@ body{
 */
 
 .btn-red:hover ~ .button{
-    transform: translate(100%);
+    transform: translate(100%); /*Al pasar el mouse por encima del boton rojo, los hermanos generales moveran*/
 }
 
 .btn-blue{

@@ -1,0 +1,90 @@
+/*
+    Las pseudos clases son una propiedad de css las cuales realizan una
+    reacción a acciones como por ejemplo pasar el mouse sobre un elmento,
+    presionar un elemento, etc
+    Las psudoclases comienzan con ':' y casi siempre se recomienda que se
+    coloque después de la clase o id definido.
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button{
+    margin: 50px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 0;
+    text-align: center;
+    width: 200px;
+}
+
+.btn-blue{
+    background: slateblue;
+}
+
+.btn-red{
+    background-color: crimson;
+}
+
+.btn-green{
+    background: green;
+}
+
+.element{
+    width: 200px;
+    height: 200px;
+    background: coral;
+    margin-left: 40px;
+}
+
+.input{
+    display: block;
+    margin: 20px;
+    padding: 16px;
+    font-size: inherit; /*Los input no heredan las fuentes, así que hay que asiganalas*/
+    font-family: inherit;
+    outline: none; /*Esto es para anular el por defecto del border*/
+}
+
+/*
+    :focus es una pseudoclase que indica cuando un usario está haciendo foco activo en un input
+    Vemos entonces en cómo cambiar el border al input.
+
+    Nota: Podemos combinar esta pseudoclase con un hermano adyacente o general
+*/
+
+.input:focus{
+    border:1px solid blueviolet;
+    border-radius: 25px;
+}
+
+.label{
+    display: inline-block;
+    background: rgb(237, 138, 158);
+    color: white;
+}
+
+/*
+    :cheked es una pseudoclase que nos permite reaccionar ante la selección o deselección
+    de un check.
+
+*/
+
+.check{
+    display: inline-block;
+    margin: 20px 0 20px 20px;
+}
+
+.check:checked + .label{
+    background: #92e49c;
+}
+
+
+/*Para profundizar en pseudoclases: https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes */

@@ -1,0 +1,72 @@
+/*
+    Las pseudos clases son una propiedad de css las cuales realizan una
+    reacción a acciones como por ejemplo pasar el mouse sobre un elmento,
+    presionar un elemento, etc
+    Las psudoclases comienzan con ':' y casi siempre se recomienda que se
+    coloque después de la clase o id definido.
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button{
+    margin: 50px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 0;
+    text-align: center;
+    width: 200px;
+}
+
+/*
+    Pseudoclase :active. Reacciona cuando se presiona un elemento y deja
+    de reaccionar automaticamente cuando se deja de presionar al elemento.
+*/
+.btn-blue{
+    background: slateblue;
+}
+
+.btn-blue:active{
+    font-size: 30px;
+}
+
+.btn-red{
+    background-color: crimson;
+}
+
+/*
+    Pseudoclase :hover. Reacciona cuando el mouse pasa sobre un elemento.
+*/
+
+.btn-red:hover{
+    transform: scale(1.2);
+}
+
+.btn-green{
+    background: green;
+}
+
+.element{
+    width: 200px;
+    height: 200px;
+    background: coral;
+    margin-left: 40px;
+}
+
+/*
+    Pseudoclase :target. Como su nombre lo dice, está vinculado al target
+    de HTML. Podemos usar este target para generar modificaciones en un 
+    elemento, interactuando desde otro. Por ejemplo, desde el boton verde
+    y a través el target, modificaremos el background-color de #element.
+*/
+
+#element:target{
+    background-color: violet;
+}
