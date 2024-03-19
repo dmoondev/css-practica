@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.element{
+    width: 300px;
+    height: 300px;
+    background: steelblue;
+    margin: 60px;
+    /*
+        La propiedad transform nos permite escalar, rotar,
+        sesgar y trasladar a un elemento.
+        METODOS:
+
+        translateX(): Permite trasladar a un elemento sobre el eje
+        de las X. Con este metodo podemos mover al elemento en cuestión
+        pero afectamos la posición de otros elementos.
+
+        translateY(): Permite trasladar a un elemento sobre el eje
+        de las Y. Con este metodo podemos mover al elemento en cuestión
+        pero afectamos la posición de otros elementos.
+    */
+}
