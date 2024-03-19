@@ -13,12 +13,57 @@
         sesgar y trasladar a un elemento.
         METODOS:
 
+        TRASLACION:
         translateX(): Permite trasladar a un elemento sobre el eje
         de las X. Con este metodo podemos mover al elemento en cuestión
-        pero afectamos la posición de otros elementos.
+        pero afectamos la posición de otros elementos. Un dato a tener 
+        en cuenta es que cuando utilizamos la unidad de medida de 
+        porcentaje, el elemento se basará en el tamaño que lo contiene.
+        Es decir que si elemento contiene un width de 100px, el 100% del
+        translateX(100%) será 100px.
 
         translateY(): Permite trasladar a un elemento sobre el eje
         de las Y. Con este metodo podemos mover al elemento en cuestión
-        pero afectamos la posición de otros elementos.
+        pero afectamos la posición de otros elementos.Un dato a tener 
+        en cuenta es que cuando utilizamos la unidad de medida de 
+        porcentaje, el elemento se basará en el tamaño que lo contiene.
+        Es decir que si elemento contiene un height de 100px, el 100% del
+        translateY(100%) será 100px.
+
+        IMPORTANTE: si deseamos trasladar un elemento tanto en el eje X, 
+        como en el eje Y; lo debemos pasar a ambos por parámetro del 
+        transform respetando el primer lugar para las X y el segundo 
+        para las Y. Esto se debe a la cascada de css. Si bien para este 
+        caso se puede definir 'transform: traslasteX() traslasteY()', lo
+        recomendable es utilizar 'transform: traslate(valor_para_X, valor_para_Y).
+
+        ROTACION:
+        rotate(): Este método permite rotar un elemento. La medidas que acepta
+        como parámetro son las angulares: 
+        * grados: deg(valores entre 0-360)
+        * gradianes: grad(valores entre 0-400)
+        * radianes: rad(valores entre 0-6.28)
+        * vueltas: turn(0 o 1).
+
+        ESCALADO:
+        scale(): Este metodo permite escalar a un elemento. Es decir, que permite
+        que el elemento se haga más grande o más pequeño.
+        Los valores que acepta como parámetros son enteros y decimales; y el valor
+        por defecto es 1. Es importante remarcar que el número no debe ir acompañado
+        por una unidad de medida.
+        Por otro lado, debemos decir que scale() es un shorthand de scaleX() y
+        scaleY().
+
+        SESGAR:
+        skew(): Este metodo permite sesgar los elementos tanto del eje X como del
+        eje Y. Es recomendable declararlos por separados y no juntos. Es decir: 
+        'transform: skewX() skew()'. Las unidades de medidas que manipula el método
+        es de rotación.
+
+        NO OLVIDAR: Es importante remarcar que todos los métodos que manipula la 
+        propiedad transform, vayan en la misma sentencia debido a la cascada de css.
+        Otra cosa que debemos tener claro, es que el elemento se verá afectado de acuerdo
+        a cual método de aplica primero y secuencialmente. El orden de los métodos, altera
+        al elemento.
     */
 }
