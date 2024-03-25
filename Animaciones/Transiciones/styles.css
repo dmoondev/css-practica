@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.element{
+    width: 200px;
+    height: 200px;
+    background: steelblue;
+    margin: 60px;
+
+    /*
+        Transición: Es el proceso de un cambio de estado a otro de un elemento. En css
+        es una de las formas que tenemos para animar elementos.
+        Esta herramiente se puede usar en casi todas las propiedades de css, pero hay
+        alguna en las que no podremos aplicar estas transiciones, como por ejemplo 
+        con justify-content.
+
+        transition: Es la propiedad que utilizaremos para aplicar transiciones a un elemento.
+        Esta propiedad es un shorthand de las siguiente propiedades.
+
+        transition-property: Especifica la propiedad o propiedades a las cuales se les aplicara
+        la transicion. Es importante remarcar que si transform no es incluída aquí, la transición 
+        no funcionará. Por defecto tiene aplicado el valor 'all', lo que indica que la transición
+        será aplicada a todos lo elementos.
+
+        transition-duration: Basicamente es la propiedad que necesitamos para poder hacer funcionar
+        nuestra transicion, ya que esto indicará el tiempo de duración que tendrá la animación. Las
+        unidades de medida que manipula es en segundos, por ejemplo '3s', o milisegundos '3000ms'. Las
+        expresiones dadas como ejemplo son equivalentes.
+
+        transition-timing-function: Esta propiedad define la curva y aceleración de la transición entre
+        el estado inicial y el final. Veamos cuales son los valores que puede recibir esta propiedad:
+            *ease:  
+                Es el valor por defecto. Aumenta la velocidad hasta la mitad de la animación y la 
+                diminuye al final.
+            *ease-in:
+                Comienza lentamente y aumenta la velocidad progresivamente.
+            *ease-out:
+                Comienza lentamente, aumenta hasta pasada la mitad y luego diminuye la velocidad.
+            *ease-in-out:
+                Comienza rapidamente y disminuye la velocidad al final.
+            *linear:
+                Es una velocidad uniforme.
+        
+        transition-delay: Define el tiempo de espera para que una animación se ejecute.
+
+        El orden del shorhand: Es importante saber que para usar el transition, no importa el orden
+        en el que se pasen los valores. Lo que sí debemos tener en cuenta es que para la duración 
+        debemos respetar que el primer valor en tiempo será para la duración, mientras que el segundo
+        valor de tiempo se aplicará al delay.
+    */
+}
