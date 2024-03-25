@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.element{
+    width: 200px;
+    height: 200px;
+    background-color: crimson;
+    margin: 60px;
+    border-radius: 50%;
+
+    /*
+        Animaciones: Las animaciones en css permiten animar elementos sin usar
+        disparadores.Para utilizar animaciones utilizaremos la propiedad 'animation'
+
+        animation-name: Con animation-name lo que hacemos es invocar un @keyframes, que
+        simula el llamado a un método, que tendrá ese nombre y éste indicará cómo se 
+        llevará a cabo la animación. El valor por defecto es 'none'.
+
+        animation-duration: define el tiempo de duración de una animación.
+
+        animation-timing-function: funciona de la misma manera que los 'transition-timing-function'
+
+        animation-iteration-count: indica la cantidad de veces que se repetirá la animación.
+        Le podemos pasar valores enteros o el valor 'infinite' para indicar que siempre debe 
+        estar ejcutandose la animación. Por defecto el valor es '1'.
+
+        animation-direction: Indica desde donde debe partir la animación. El valor por defecto
+        es 'normal' que le indica al elemento que la animación debe comenzar en el 0% e ir hasta
+        el 100% gradualmente, pero una vez que llega al 100% vuelve de forma directa al 0%.
+        Luego tenemos a 'reverse' que indica que la animación comenzará en el 100%. También tenemos
+        'alternate' que indica que la animación irá hasta el 100% y volverá al 0% de forma gradual y
+        no repentina como lo hace con 'normal'. El valor 'alternate-reverse' hace lo mismo, pero 
+        comenzando desde el 100%.
+
+        animation-delay: Hace lo mismo que trasition-delay. Es decir que indica cuanto tiempo
+        debe esperar el elemento para ejecutarse.
+
+        animation-fill-mode: Esta propiedad define lo que sucede antes y después de que se ejecute
+        la animación. En otras palabras, se encarga de decirle al navegador si los estilos de la
+        animación se aplican después de que termine la animación o antes. Por defecto el valor es 
+        'none'. Los valores que puede recibir esta propiedad son:
+            *forwards:  Los estilos se mantienen al final de la animación (cuando la animación 
+            alcanza el último fotograma definido). Esto significa que los estilos del último 
+            fotograma se mantienen después de que la animación haya terminado.
+
+            *backwards: Los estilos definidos en el primer fotograma de la animación se aplican 
+            antes de que la animación comience. Esto significa que los estilos del primer fotograma
+            se aplican antes de que la animación comience a reproducirse. Este valor es útil si 
+            quieres que el elemento comience con los estilos de la primera fase de la animación antes
+            de que la animación comience a reproducirse.
+            
+            *both: Combina los efectos de forwards y backwards, es decir, aplica los estilos definidos 
+            en el primer fotograma antes de que comience la animación y mantiene los estilos del último 
+            fotograma después de que la animación haya terminado.
+
+        animation-play-state: Define si una animación está en pausa o está corriendo. Por defecto tiene
+        el valor running, pero el otro valor que podemos pasar es 'paused', que pausará la animación.
+
+        El orden del shorthand: Como casi todos los shorthand, el orden no es relevante, pero si debemos
+        tener en cuenta que el primer valor de tiempo es para la duración y el segundo para el delay.
+        'animation: name duration timing-function delay iteration-count direction fill-mode'
+    */
+
+    animation: 2s mover 4 ease-in alternate 2s both;
+}
+
+
+/*
+    @keyframes: Funcionan como lo media-query, pero a diferencia de estos, los key frames
+    tendrá selectores como 'from' o 'to', que respectivamente indican desde donde parte la
+    animación y hacia donde va. Pero no son los únicos selectores que podemos utilzar, ya que
+    tambien podemos señalizar porcentaje para indicar cómo se va a comportar el elemento. Este
+    porcentaje se basa proporcionalmente en la duración de la animación.
+*/
+
+@keyframes mover {
+    0%{
+        transform: translate(0) scale(.5);
+        background: crimson;
+    }
+    25%{
+        transform: translate(100%);
+        background-color: salmon;
+    }
+    50%{
+        transform: translate(100%, 100%);
+        background-color: slateblue;
+    }
+    75%{
+        transform: translate(0, 100%);
+        background-color: teal;
+    }
+    100%{
+        transform: translate(100%, 100%);
+    }
+}
